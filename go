@@ -34,14 +34,7 @@ clone_app() {
 }
 
 configure_dotbash() {
-  ln -sfn $WORKSPACE_PATH/dotbash/bashrc ~/.bashrc
-  ln -sfn $WORKSPACE_PATH/dotbash/bash_profile ~/.bash_profile
-  ln -sfn $WORKSPACE_PATH/dotbash/bash ~/.bash
   ln -sfn $WORKSPACE_PATH/dotbash/inputrc ~/.inputrc
-  chmod 755 ~/.bash/bin/*
-  sudo bash -c "echo '/usr/local/bin/bash' >> /etc/shells"
-  sudo chsh -s /usr/local/bin/bash
-  chsh -s /usr/local/bin/bash
 }
 
 install_brew() {
