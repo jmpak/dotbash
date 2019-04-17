@@ -60,7 +60,6 @@ install_pip_apps() {
 manually_configure_apps() {
   echo "The below applications will require manual login:"
   echo "- Dropbox (login)"
-  echo "- 1Password (login)"
   echo "- Google Drive (login, setup shortcuts)"
   echo "- Google Chrome (login)"
   echo "- Evernote (login)"
@@ -73,9 +72,9 @@ manually_configure_apps() {
   echo "- MindNode (license)"
   echo "- iTerm (config in dotbash)"
   echo "- Adobe Creative Cloud (login, Photoshop, Lightroom)"
-  echo "- Alfred (license, config in Dropbox)"
-  echo "- Slate (config, permissions)"
   echo "- Amphetamine (app store, config)"
+  echo "- 1Password 6"
+  echo "Docker"
 }
 
 configure_dotvim() {
