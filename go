@@ -47,6 +47,10 @@ install_brew() {
   brew tap Homebrew/bundle
 }
 
+install_yadr() {
+  sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh `"
+}
+
 install_brew_apps() {
   cd $WORKSPACE_PATH/dotbash
   brew bundle
@@ -98,10 +102,6 @@ configure_dotgit() {
   ln -sfn $WORKSPACE_PATH/dotgit/gitignore ~/.gitignore
 }
 
-configure_dotslate() {
-  ln -sfn $WORKSPACE_PATH/dotslate/slate ~/.slate
-}
-
 update_all_apps() {
   $WORKSPACE_PATH/dotbash/bash/bin/updateall
 }
@@ -135,8 +135,7 @@ pp "Installing brew applications"   && install_brew_apps
 pp "Installing pip applications"    && install_pip_apps
 pp "Configuring dotbash"            && configure_dotbash
 pp "Setup Ruby"                     && setup_ruby
-pp "Downloading dotslate"           && clone_app dotslate
-pp "Configuring dotslate"           && configure_dotslate
+pp "Installing yadr"                && install_yadr
 pp "Update all applications"        && update_all_apps
 pp "Refresh packages"               && refresh_all_apps
 pp "Manually configure apps"        && manually_configure_apps
