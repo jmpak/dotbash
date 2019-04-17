@@ -71,14 +71,15 @@ manually_configure_apps() {
   echo "- Skype (login)"
   echo "- NordVPN (login)"
   echo "- Tunnelblick (login)"
+  echo "- 1Password 6"
+  echo "Docker"
+  echo "VirtualBox"
 
   echo "The below applications will require manual setup:"
   echo "- MindNode (license)"
   echo "- iTerm (config in dotbash)"
   echo "- Adobe Creative Cloud (login, Photoshop, Lightroom)"
   echo "- Amphetamine (app store, config)"
-  echo "- 1Password 6"
-  echo "Docker"
 }
 
 configure_dotvim() {
