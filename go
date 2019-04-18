@@ -33,6 +33,10 @@ clone_app() {
   git clone "https://github.com/jmpak/$APP.git"
 }
 
+configure_mvim() {
+  ln -sfn $WORKSPACE_PATH/dotbash/inputrc ~/.inputrc
+}
+
 configure_dotbash() {
   ln -sfn $WORKSPACE_PATH/dotbash/inputrc ~/.inputrc
 }
@@ -58,7 +62,7 @@ install_brew_apps() {
 
 install_pip_apps() {
   cd $WORKSPACE_PATH/dotbash
-  pip install --user -r requirements.txt
+  pip3 install --user -r requirements.txt
 }
 
 manually_configure_apps() {
@@ -108,7 +112,6 @@ update_all_apps() {
 }
 
 refresh_all_apps() {
-  cd $WORKSPACE_PATH/dotbash
   ./refresh
 }
 
@@ -135,6 +138,7 @@ pp "Downloading dotbash"            && clone_app dotbash
 pp "Installing brew applications"   && install_brew_apps
 pp "Installing pip applications"    && install_pip_apps
 pp "Configuring dotbash"            && configure_dotbash
+pp "Configuring mvim"                && configure_mvim
 pp "Setup Ruby"                     && setup_ruby
 pp "Installing yadr"                && install_yadr
 pp "Update all applications"        && update_all_apps
